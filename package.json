@@ -1,6 +1,6 @@
 {
-  "name": "learning_called",
-  "version": "1.0.0",
+  "name": "retrieval_augmented_generation",
+  "version": "2.0.0",
   "description": "learning IA with typescript project",
   "main": "index.js",
   "scripts": {
