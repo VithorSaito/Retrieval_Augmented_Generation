@@ -1,21 +1,19 @@
 import OpenAI from "openai";
 
-import { openai } from "../lib/openai";
-
 export class Agent {
   constructor(private agent: OpenAI) { }
 
-  async generateEmbadding(value: string): Promise<String> {
+  async generateEmbadding(value: string): Promise<number[]> {
     const embedding = await this.agent.embeddings.create({
       model: "text-embedding-3-small",
       input: value
     })
 
-    return `${embedding.data[0].embedding.join(',')}`
+    return embedding.data[0].embedding
 
   }
 
-  async generateResponse(prompt: string): Promise<String> {
+  async generateResponse(prompt: string): Promise<string> {
     const response = await this.agent.responses.create({
       model: 'gpt-5-2025-08-07',
       input: prompt
@@ -25,4 +23,3 @@ export class Agent {
   }
 }
 
-export const agent = new Agent(openai)
