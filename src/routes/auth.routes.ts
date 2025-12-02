@@ -1,6 +1,7 @@
 import { FastifyInstance } from "fastify";
-import { registerController } from "../controller/authController/register";
+
 import { loginController } from "../controller/authController/login";
+import { registerController } from "../controller/authController/register";
 
 
 export const authRoutes = async (server: FastifyInstance) => {

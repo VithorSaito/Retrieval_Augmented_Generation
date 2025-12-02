@@ -1,19 +1,16 @@
 import "dotenv/config"
 
 import fastify from "fastify"
-import jwt from "@fastify/jwt"
 import ws from "@fastify/websocket"
 
+import auth from "./src/plugin/auth"
 import { routes } from "./src/routes/@.routes"
-import { env } from "./src/env"
 
 const Fastify = fastify()
 
-Fastify.register(ws)
+auth(Fastify)
 
-Fastify.register(jwt, {
-  secret: env.JWT_SECRET
-})
+Fastify.register(ws)
 
 Fastify.register(routes)
 

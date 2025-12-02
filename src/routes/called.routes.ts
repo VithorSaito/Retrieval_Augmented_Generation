@@ -6,13 +6,13 @@ import { createKnowledgeController } from "../controller/knowledgeBaseController
 export const calledRoutes = async (server: FastifyInstance) => {
 
   server
-    .post("/knowledge", async (request, reply) => {
+    .post("/knowledge", { onRequest: [server.authenticate] }, async (request, reply) => {
       const result = await createKnowledgeController.execute(request, reply)
 
       return result
 
     })
-    .get("/question", { websocket: true }, async (websocket, request) => {
+    .get("/question", { websocket: true, onRequest: [server.authenticate] }, async (websocket, request) => {
       const result = await createQuestionController.execute(websocket, request)
 
       return result
