@@ -54,11 +54,11 @@ src/
 
 ```json
 {
-"title": "string",
-"category": "string",
-"problem": "string",
-"solution": "string",
-"environment": "string"
+  "title": "string",
+  "category": "string",
+  "problem": "string",
+  "solution": "string",
+  "environment": "string"
 }
 ```
 
@@ -66,7 +66,7 @@ Resposta
 
 ```json
 {
-"statuscode": 201
+  "statuscode": 201
 }
 ```
 
@@ -74,29 +74,24 @@ Resposta
 
 ```json
 {
-"question": "string"
+  "question": "string"
 }
-
 ```
+
 Resposta
 
 ```json
 {
-"response": "string"
+  "response": "string"
 }
-
 ```
 
 ## Implementações ⚙️
 
 - [x] Integração e implementação do OpenAI
 - [x] Conexão com DB na AWS
-- [ ] Autenticação JWT
+- [x] Autenticação JWT
 - [x] Websocket
 - [ ] Persistencia das conversas com Redis
 - [ ] Testes unitários
 - [ ] Interface Visual com EJS
-
-
-
-
