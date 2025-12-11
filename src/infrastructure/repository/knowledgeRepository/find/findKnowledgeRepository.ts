@@ -1,10 +1,11 @@
+import { FindKnowledgeRepository } from "../../../../domain/repositories/knowledgeRepository/find/findKnowledgeRepository";
 import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO";
 import { PrismaClient } from "../../../database/src/database/generated/prisma/client";
 
-export class CosineSimilarityRepository {
+export class PrismaFindKnowledgeRepository implements FindKnowledgeRepository {
   constructor(private database: PrismaClient) { }
 
-  async execute(embeddingQuestion: string) {
+  async compareVector(embeddingQuestion: string): Promise<KnowLedgeDTO[]> {
 
     const result: KnowLedgeDTO[] = await this.database.$queryRaw`
       SELECT id,

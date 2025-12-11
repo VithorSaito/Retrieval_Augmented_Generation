@@ -1,10 +1,11 @@
+import { SaveKnowledgeRepository } from "../../../../domain/repositories/knowledgeRepository/create/saveKnowledgeRepository";
 import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO";
 import { PrismaClient } from "../../../database/src/database/generated/prisma/client";
 
-export class SaveKnowledgeRepository {
+export class PrismaSaveKnowledgeRepository implements SaveKnowledgeRepository {
   constructor(private database: PrismaClient) { }
 
-  async execute(data: KnowLedgeDTO, embeddingResult: string) {
+  async saveKnowledge(data: KnowLedgeDTO, embeddingResult: string) {
 
     const result = await this.database.$queryRaw`
       INSERT INTO knowledge (

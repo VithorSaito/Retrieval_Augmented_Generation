@@ -1,11 +1,11 @@
 import { GenerateEmbadding } from "../../../../domain/services/generateEmbaddingService";
-import { SaveKnowledgeRepository } from "../../../../infrastructure/repository/saveKnowledgeRepository/create/saveKnowledgeRepository";
+import { PrismaSaveKnowledgeRepository } from "../../../../infrastructure/repository/knowledgeRepository/create/saveKnowledgeRepository";
 import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO";
 import { InternalError } from "../../../../shared/errors/InternalError";
 
 export class CreateKnowledgeUseCase {
   constructor(
-    private readonly saveKnowledge: SaveKnowledgeRepository,
+    private readonly saveKnowledge: PrismaSaveKnowledgeRepository,
     private readonly generateEmbedding: GenerateEmbadding
   ) { }
 
@@ -15,7 +15,7 @@ export class CreateKnowledgeUseCase {
 
     try {
 
-      const saveInDatabase = this.saveKnowledge.execute(data, embeddingResult)
+      const saveInDatabase = this.saveKnowledge.saveKnowledge(data, embeddingResult)
 
       return saveInDatabase
 

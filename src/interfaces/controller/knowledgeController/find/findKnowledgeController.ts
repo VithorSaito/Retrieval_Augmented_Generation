@@ -1,9 +1,9 @@
 import { WebSocket } from "ws";
 import { FastifyRequest } from "fastify";
-import { CreateQuestionUseCase } from "../../../../application/usecase/questionUseCase/create/createQuestionUseCase";
+import { FindKnowledgeUseCase } from "../../../../application/usecase/knowledgeUseCase/find/findKnowledgeUseCase";
 
-export class CreateQuestionController {
-  constructor(private createQuestionUseCase: CreateQuestionUseCase) { }
+export class FindKnowledgeController {
+  constructor(private findKnowledgeUseCase: FindKnowledgeUseCase) { }
 
   async execute(socket: WebSocket, request: FastifyRequest) {
 
@@ -14,7 +14,7 @@ export class CreateQuestionController {
         const text = message.toString()
         const { username } = request.user as { username: string }
 
-        const result = await this.createQuestionUseCase.execute(text, username)
+        const result = await this.findKnowledgeUseCase.execute(text, username)
 
         socket.send(result)
 

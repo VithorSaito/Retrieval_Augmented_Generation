@@ -1,15 +1,18 @@
-import { Prompts } from "../../../../shared/prompts"
 import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO"
+
 import { GetCache } from "../../../../domain/services/getCacheService"
 import { SetCache } from "../../../../domain/services/setCacheService"
 import { GenerateResponse } from "../../../../domain/services/generateResponseService"
 import { GenerateEmbadding } from "../../../../domain/services/generateEmbaddingService"
-import { CosineSimilarityRepository } from "../../../../infrastructure/repository/consineSimilarityRepository/create/consineSimilarityRepository"
-import { InternalError } from "../../../../shared/errors/InternalError"
 
-export class CreateQuestionUseCase {
+import { Prompts } from "../../../../shared/prompts"
+import { InternalError } from "../../../../shared/errors/InternalError"
+import { PrismaFindKnowledgeRepository } from "../../../../infrastructure/repository/knowledgeRepository/find/findKnowledgeRepository"
+
+
+export class FindKnowledgeUseCase {
   constructor(
-    private readonly cosineSimilarity: CosineSimilarityRepository,
+    private readonly findKnowledge: PrismaFindKnowledgeRepository,
     private readonly generateEmbadding: GenerateEmbadding,
     private readonly generateResponse: GenerateResponse,
     private readonly getCache: GetCache,
@@ -24,7 +27,7 @@ export class CreateQuestionUseCase {
 
       const embeddingQuestion = await this.generateEmbadding.execute(message)
 
-      const similarResults = await this.cosineSimilarity.execute(embeddingQuestion)
+      const similarResults = await this.findKnowledge.compareVector(embeddingQuestion)
 
       var formated: string[] = []
 
