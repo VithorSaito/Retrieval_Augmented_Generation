@@ -30,6 +30,14 @@ npm install
   DATABASE_URL= "string",
   JWT_SECRET= "string",
 
+# Rodar o docker compose
+
+docker compose up
+
+# Rodar as migrations do Prisma
+
+npx prisma migrate dev
+
 # Iniciar o projeto
 
 npm run dev
