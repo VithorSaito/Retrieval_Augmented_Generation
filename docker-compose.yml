@@ -1,0 +1,14 @@
+version: "5.1.3"
+services:
+  redis:
+    image: redis:8.8-m03-trixie
+    ports: 
+      - "6379:6379"
+  postgres:
+    image: ankane/pgvector
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: chatbot
+    ports:
+      - "5432:5432"
