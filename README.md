@@ -163,5 +163,5 @@ Resposta
 - [x] Persistencia das conversas com Redis
 - [ ] Testes unitários
 - [ ] Interface Visual com EJS
-- [ ] Swagger
+- [x] Swagger
 - [ ] CI/CD
