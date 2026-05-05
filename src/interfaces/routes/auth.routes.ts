@@ -1,20 +1,20 @@
-import { FastifyInstance } from "fastify";
-
 import { loginController } from "../controller/authController/login/index.js";
 import { registerController } from "../controller/authController/register/index.js";
+import { FastifyPluginAsyncZod } from "fastify-type-provider-zod";
+import { authSchemas } from "../schemas/auth.schemas.js";
 
 
-export const authRoutes = async (server: FastifyInstance) => {
+export const authRoutes: FastifyPluginAsyncZod = async app => {
 
-  server
-    .post("/register", async (request, reply) => {
+  app
+    .post("/register", { schema: authSchemas.register }, async (request, reply) => {
 
       const result = await registerController.execute(request, reply)
 
       return result
 
     })
-    .post("/login", async (request, reply) => {
+    .post("/login", { schema: authSchemas.login }, async (request, reply) => {
 
       const result = await loginController.execute(request, reply)
 

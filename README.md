@@ -48,7 +48,7 @@ npm run dev
 
 ```bash
 src/
- ├── application  > casos de usos da utilizando as interfaces
+ ├── application  > casos de usos
  ├── domain >  entidades e regras de negocio
  ├── infrastructure > servicos externo / implementações
  ├── interfaces > controladores
