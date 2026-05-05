@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { RegisterDTO } from "../../../dto/registerDTO";
-import { RegisterUseCase } from "../../../../application/usecase/authUseCase/register/registerUsecase";
+import { RegisterDTO } from "../../../dto/registerDTO.js";
+import { RegisterUseCase } from "../../../../application/usecase/authUseCase/register/registerUsecase.js";
 
 export class RegisterController {
   constructor(private registerUseCase: RegisterUseCase) { }

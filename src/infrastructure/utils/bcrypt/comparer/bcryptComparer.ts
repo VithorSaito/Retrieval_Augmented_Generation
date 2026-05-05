@@ -1,5 +1,5 @@
 import { compare } from "bcrypt";
-import { HashComparer } from "../../../../domain/services/hashComparerService";
+import { HashComparer } from "../../../../domain/services/hashComparerService.js";
 
 
 export class BcryptHashComparer implements HashComparer {

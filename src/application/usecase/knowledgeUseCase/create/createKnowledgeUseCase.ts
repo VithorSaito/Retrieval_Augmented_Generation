@@ -1,7 +1,7 @@
-import { GenerateEmbadding } from "../../../../domain/services/generateEmbaddingService";
-import { PrismaSaveKnowledgeRepository } from "../../../../infrastructure/repository/knowledgeRepository/create/saveKnowledgeRepository";
-import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO";
-import { InternalError } from "../../../../shared/errors/InternalError";
+import { GenerateEmbadding } from "../../../../domain/services/generateEmbaddingService.js";
+import { PrismaSaveKnowledgeRepository } from "../../../../infrastructure/repository/knowledgeRepository/create/saveKnowledgeRepository.js";
+import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO.js";
+import { InternalError } from "../../../../shared/errors/InternalError.js";
 
 export class CreateKnowledgeUseCase {
   constructor(

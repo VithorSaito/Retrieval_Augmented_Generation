@@ -1,9 +1,9 @@
 import "dotenv/config"
 
 import fastify from "fastify"
-import { makeDependencies } from "./makeDependencies"
-import { registerPlugins } from "./registerPlugins"
-import { registerRoutes } from "./registerRoutes"
+import { makeDependencies } from "./makeDependencies.js"
+import { registerPlugins } from "./registerPlugins.js"
+import { registerRoutes } from "./registerRoutes.js"
 
 async function server() {
 

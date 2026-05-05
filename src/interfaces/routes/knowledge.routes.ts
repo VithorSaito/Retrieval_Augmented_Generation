@@ -1,7 +1,7 @@
 import { FastifyInstance } from "fastify";
 
-import { createKnowledgeController } from "../controller/knowledgeController/create";
-import { findKnowledgeController } from "../controller/knowledgeController/find";
+import { createKnowledgeController } from "../controller/knowledgeController/create/index.js";
+import { findKnowledgeController } from "../controller/knowledgeController/find/index.js";
 
 export const knowledgeRoutes = async (server: FastifyInstance) => {
 

@@ -1,6 +1,6 @@
 import { WebSocket } from "ws";
 import { FastifyRequest } from "fastify";
-import { FindKnowledgeUseCase } from "../../../../application/usecase/knowledgeUseCase/find/findKnowledgeUseCase";
+import { FindKnowledgeUseCase } from "../../../../application/usecase/knowledgeUseCase/find/findKnowledgeUseCase.js";
 
 export class FindKnowledgeController {
   constructor(private findKnowledgeUseCase: FindKnowledgeUseCase) { }

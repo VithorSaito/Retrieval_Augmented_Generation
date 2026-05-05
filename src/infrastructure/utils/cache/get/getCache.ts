@@ -1,5 +1,5 @@
-import { redis } from "../../../external/redis";
-import { GetCache } from "../../../../domain/services/getCacheService";
+import { redis } from "../../../external/redis.js";
+import { GetCache } from "../../../../domain/services/getCacheService.js";
 
 export class GetCacheRedis implements GetCache {
   async execute(username: string): Promise<string | null> {

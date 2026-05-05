@@ -1,3 +1,3 @@
-import { GetCacheRedis } from "./getCache";
+import { GetCacheRedis } from "./getCache.js";
 
 export const getCache = new GetCacheRedis()

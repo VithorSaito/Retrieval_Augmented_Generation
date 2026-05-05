@@ -1,6 +1,6 @@
-import { FindKnowledgeRepository } from "../../../../domain/repositories/knowledgeRepository/find/findKnowledgeRepository";
-import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO";
-import { PrismaClient } from "../../../database/src/database/generated/prisma/client";
+import { FindKnowledgeRepository } from "../../../../domain/repositories/knowledgeRepository/find/findKnowledgeRepository.js";
+import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO.js";
+import { PrismaClient } from "../../../database/src/database/generated/prisma/client.js";
 
 export class PrismaFindKnowledgeRepository implements FindKnowledgeRepository {
   constructor(private database: PrismaClient) { }

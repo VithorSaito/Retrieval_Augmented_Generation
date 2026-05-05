@@ -1,7 +1,7 @@
 import { FastifyInstance } from "fastify"
 
 import ws from "@fastify/websocket"
-import routes from "../interfaces/routes/@.routes"
+import routes from "../interfaces/routes/@.routes.js"
 
 export function registerPlugins(app: FastifyInstance) {
 

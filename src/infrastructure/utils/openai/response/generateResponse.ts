@@ -1,6 +1,6 @@
-import { env } from "../../../external/env";
-import { openai } from "../../../external/openai";
-import { GenerateResponse } from "../../../../domain/services/generateResponseService";
+import { env } from "../../../external/env.js";
+import { openai } from "../../../external/openai.js";
+import { GenerateResponse } from "../../../../domain/services/generateResponseService.js";
 
 export class OpenaiGenerateResponse implements GenerateResponse {
   async execute(prompt: string): Promise<string> {

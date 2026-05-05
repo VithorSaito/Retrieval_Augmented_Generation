@@ -1,7 +1,7 @@
-import { User } from "../../../../domain/entities/userEntity"
-import { RegisterRepository } from "../../../../domain/repositories/authRepository/register/registerRepository"
-import { RegisterDTO } from "../../../../interfaces/dto/registerDTO"
-import { PrismaClient } from "../../../database/src/database/generated/prisma/client"
+import { User } from "../../../../domain/entities/userEntity.js"
+import { RegisterRepository } from "../../../../domain/repositories/authRepository/register/registerRepository.js"
+import { RegisterDTO } from "../../../../interfaces/dto/registerDTO.js"
+import { PrismaClient } from "../../../database/src/database/generated/prisma/client.js"
 
 export class PrismaRegisterRepository implements RegisterRepository {
   constructor(private readonly database: PrismaClient) { }

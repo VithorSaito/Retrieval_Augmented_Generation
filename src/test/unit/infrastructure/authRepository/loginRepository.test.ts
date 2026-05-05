@@ -1,6 +1,6 @@
 import { test, describe, it, vi, expect } from "vitest";
-import { PrismaLoginRepository } from "../../../../infrastructure/repository/authRepository/login/loginRepository";
-import { PrismaClient } from "../../../../infrastructure/database/src/database/generated/prisma/client";
+import { PrismaLoginRepository } from "../../../../infrastructure/repository/authRepository/login/loginRepository.js";
+import { PrismaClient } from "../../../../infrastructure/database/src/database/generated/prisma/client.js";
 
 test('Repositorys Test')
 

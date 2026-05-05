@@ -1,5 +1,5 @@
-import { RegisterDTO } from "../../../../interfaces/dto/registerDTO";
-import { User } from "../../../entities/userEntity";
+import { RegisterDTO } from "../../../../interfaces/dto/registerDTO.js";
+import { User } from "../../../entities/userEntity.js";
 
 export interface RegisterRepository {
   findByEmail(email: string): Promise<User | null>,

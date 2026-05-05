@@ -1,7 +1,7 @@
-import { RegisterDTO } from "../../../../interfaces/dto/registerDTO";
-import { BadRequest } from "../../../../shared/errors/BadRequest";
-import { RegisterRepository } from "../../../../domain/repositories/authRepository/register/registerRepository";
-import { HashPassword } from "../../../../domain/services/hashPasswordService";
+import { RegisterDTO } from "../../../../interfaces/dto/registerDTO.js";
+import { BadRequest } from "../../../../shared/errors/BadRequest.js";
+import { RegisterRepository } from "../../../../domain/repositories/authRepository/register/registerRepository.js";
+import { HashPassword } from "../../../../domain/services/hashPasswordService.js";
 
 export class RegisterUseCase {
   constructor(

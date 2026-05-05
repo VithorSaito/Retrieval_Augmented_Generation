@@ -1,6 +1,6 @@
 import jwt from "@fastify/jwt"
 import { FastifyInstance, FastifyReply, FastifyRequest } from "fastify"
-import { env } from "../external/env"
+import { env } from "../external/env.js"
 
 
 const auth = async (fastify: FastifyInstance) => {

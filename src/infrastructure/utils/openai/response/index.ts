@@ -1,3 +1,3 @@
-import { OpenaiGenerateResponse } from "./generateResponse";
+import { OpenaiGenerateResponse } from "./generateResponse.js";
 
 export const generateResponse = new OpenaiGenerateResponse()

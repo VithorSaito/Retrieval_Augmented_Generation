@@ -1,3 +1,3 @@
-import { BcryptHashComparer } from "./bcryptComparer";
+import { BcryptHashComparer } from "./bcryptComparer.js";
 
 export const comparerCrypto = new BcryptHashComparer()

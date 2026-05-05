@@ -1,6 +1,6 @@
 import z from "zod";
 import { FastifyReply, FastifyRequest } from "fastify";
-import { CreateKnowledgeUseCase } from "../../../../application/usecase/knowledgeUseCase/create/createKnowledgeUseCase";
+import { CreateKnowledgeUseCase } from "../../../../application/usecase/knowledgeUseCase/create/createKnowledgeUseCase.js";
 
 export class CreateKnowledgeController {
   constructor(private createKnowledgeUseCase: CreateKnowledgeUseCase) { }

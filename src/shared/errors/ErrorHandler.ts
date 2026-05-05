@@ -1,5 +1,5 @@
 import { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
-import { ApiError } from "./ApiError";
+import { ApiError } from "./ApiError.js";
 
 export const errorHandler = (server: FastifyInstance) => {
 

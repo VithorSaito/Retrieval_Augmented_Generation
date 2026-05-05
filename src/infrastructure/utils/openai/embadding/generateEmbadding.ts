@@ -1,5 +1,5 @@
-import { openai } from "../../../external/openai";
-import { GenerateEmbadding } from "../../../../domain/services/generateEmbaddingService";
+import { GenerateEmbadding } from "../../../../domain/services/generateEmbaddingService.js";
+import { openai } from "../../../external/openai.js";
 
 export class OpenaiGenerateEmbadding implements GenerateEmbadding {
   async execute(value: string): Promise<string> {

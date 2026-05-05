@@ -1,7 +1,7 @@
-import { PrismaClient } from "../../../database/src/database/generated/prisma/client";
+import { PrismaClient } from "../../../database/src/database/generated/prisma/client.js";
 
-import { LoginRepository } from "../../../../domain/repositories/authRepository/login/loginRepository";
-import { User } from "../../../../domain/entities/userEntity";
+import { LoginRepository } from "../../../../domain/repositories/authRepository/login/loginRepository.js";
+import { User } from "../../../../domain/entities/userEntity.js";
 
 export class PrismaLoginRepository implements LoginRepository {
   constructor(private readonly database: PrismaClient) { }

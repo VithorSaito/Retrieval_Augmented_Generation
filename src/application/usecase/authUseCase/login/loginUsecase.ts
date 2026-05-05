@@ -1,6 +1,6 @@
-import { Unauthorized } from "../../../../shared/errors/Unauthorized";
-import { HashComparer } from "../../../../domain/services/hashComparerService";
-import { LoginRepository } from "../../../../domain/repositories/authRepository/login/loginRepository";
+import { Unauthorized } from "../../../../shared/errors/Unauthorized.js";
+import { HashComparer } from "../../../../domain/services/hashComparerService.js";
+import { LoginRepository } from "../../../../domain/repositories/authRepository/login/loginRepository.js";
 
 export class LoginUseCase {
   constructor(

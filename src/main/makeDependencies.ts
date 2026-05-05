@@ -1,4 +1,4 @@
-import { redis } from "../infrastructure/external/redis";
+import { redis } from "../infrastructure/external/redis.js";
 
 export async function makeDependencies() {
 

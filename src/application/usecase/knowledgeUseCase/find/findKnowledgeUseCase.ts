@@ -1,13 +1,13 @@
-import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO"
+import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO.js"
 
-import { GetCache } from "../../../../domain/services/getCacheService"
-import { SetCache } from "../../../../domain/services/setCacheService"
-import { GenerateResponse } from "../../../../domain/services/generateResponseService"
-import { GenerateEmbadding } from "../../../../domain/services/generateEmbaddingService"
+import { GetCache } from "../../../../domain/services/getCacheService.js"
+import { SetCache } from "../../../../domain/services/setCacheService.js"
+import { GenerateResponse } from "../../../../domain/services/generateResponseService.js"
+import { GenerateEmbadding } from "../../../../domain/services/generateEmbaddingService.js"
 
-import { Prompts } from "../../../../shared/prompts"
-import { InternalError } from "../../../../shared/errors/InternalError"
-import { PrismaFindKnowledgeRepository } from "../../../../infrastructure/repository/knowledgeRepository/find/findKnowledgeRepository"
+import { Prompts } from "../../../../shared/prompts/index.js"
+import { InternalError } from "../../../../shared/errors/InternalError.js"
+import { PrismaFindKnowledgeRepository } from "../../../../infrastructure/repository/knowledgeRepository/find/findKnowledgeRepository.js"
 
 
 export class FindKnowledgeUseCase {

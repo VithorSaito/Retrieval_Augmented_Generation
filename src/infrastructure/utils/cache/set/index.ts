@@ -1,3 +1,3 @@
-import { SetCacheRedis } from "./setCache";
+import { SetCacheRedis } from "./setCache.js";
 
 export const setCache = new SetCacheRedis()

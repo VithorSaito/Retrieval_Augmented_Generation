@@ -1,5 +1,5 @@
-import { historyPrompt } from "./history";
-import { ragBase } from "./ragBase";
+import { historyPrompt } from "./history.js";
+import { ragBase } from "./ragBase.js";
 
 export const Prompts = {
   rag: ragBase,

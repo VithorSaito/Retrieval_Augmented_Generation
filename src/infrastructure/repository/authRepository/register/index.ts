@@ -1,4 +1,4 @@
-import { database } from "../../../external/prisma";
-import { PrismaRegisterRepository } from "./registerRepository";
+import { database } from "../../../external/prisma.js";
+import { PrismaRegisterRepository } from "./registerRepository.js";
 
 export const registerRepository = new PrismaRegisterRepository(database)
