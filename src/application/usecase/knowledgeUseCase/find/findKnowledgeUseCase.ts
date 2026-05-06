@@ -1,22 +1,20 @@
 import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO.js"
 
-import { GetCache } from "../../../../domain/services/getCacheService.js"
-import { SetCache } from "../../../../domain/services/setCacheService.js"
-import { GenerateResponse } from "../../../../domain/services/generateResponseService.js"
-import { GenerateEmbadding } from "../../../../domain/services/generateEmbaddingService.js"
-
 import { Prompts } from "../../../../shared/prompts/index.js"
 import { InternalError } from "../../../../shared/errors/InternalError.js"
 import { PrismaFindKnowledgeRepository } from "../../../../infrastructure/repository/knowledgeRepository/find/findKnowledgeRepository.js"
-
+import { GenerateEmbaddingGateway } from "../../../../domain/gateways/generateEmbaddingGateway.js"
+import { GenerateResponseGateway } from "../../../../domain/gateways/generateResponseGateway.js"
+import { GetCacheGateway } from "../../../../domain/gateways/getCacheServiceGateway.js"
+import { SetCacheGateway } from "../../../../domain/gateways/setCacheGateway.js"
 
 export class FindKnowledgeUseCase {
   constructor(
     private readonly findKnowledge: PrismaFindKnowledgeRepository,
-    private readonly generateEmbadding: GenerateEmbadding,
-    private readonly generateResponse: GenerateResponse,
-    private readonly getCache: GetCache,
-    private readonly setCache: SetCache
+    private readonly generateEmbadding: GenerateEmbaddingGateway,
+    private readonly generateResponse: GenerateResponseGateway,
+    private readonly getCache: GetCacheGateway,
+    private readonly setCache: SetCacheGateway
   ) { }
 
   async execute(message: string, username: string) {

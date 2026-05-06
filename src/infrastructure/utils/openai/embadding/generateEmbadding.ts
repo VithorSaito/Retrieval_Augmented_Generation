@@ -1,7 +1,7 @@
-import { GenerateEmbadding } from "../../../../domain/services/generateEmbaddingService.js";
+import { GenerateEmbaddingGateway } from "../../../../domain/gateways/generateEmbaddingGateway.js";
 import { openai } from "../../../external/openai.js";
 
-export class OpenaiGenerateEmbadding implements GenerateEmbadding {
+export class OpenaiGenerateEmbadding implements GenerateEmbaddingGateway {
   async execute(value: string): Promise<string> {
     const embedding = await openai.embeddings.create({
       model: "text-embedding-3-small",

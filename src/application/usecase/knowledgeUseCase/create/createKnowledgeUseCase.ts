@@ -1,4 +1,4 @@
-import { GenerateEmbadding } from "../../../../domain/services/generateEmbaddingService.js";
+import { GenerateEmbadding } from "../../../../domain/gateways/generateEmbaddingGateway.js";
 import { PrismaSaveKnowledgeRepository } from "../../../../infrastructure/repository/knowledgeRepository/create/saveKnowledgeRepository.js";
 import { KnowLedgeDTO } from "../../../../interfaces/dto/knowledgeDTO.js";
 import { InternalError } from "../../../../shared/errors/InternalError.js";
